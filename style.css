@@ -1,10 +1,10 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-}
+} */
 
 body {
   margin: 0;
@@ -18,15 +18,15 @@ body {
       padding: 100px;
     } 
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .flex {
@@ -38,11 +38,11 @@ html {
   align-items: center;
 }
 
-header,
+/* header,
 footer,
 section {
   padding: 2rem;
-}
+} */
 
 /* header {
   display: flex;
@@ -93,12 +93,12 @@ nav a:hover::after {
   transform: scale(1.05);
 }
 
-.btn2 {
+/* .btn2 {
   background-color: #0a021b;
   color: white;
   border: none;
   font-size: 25px;
-}
+} */
 
 .hero {
   display: flex;
@@ -124,7 +124,10 @@ nav a:hover::after {
 
 .left  {
   width: 700px;
+  margin-bottom: 20px;
 }
+
+
 #hero p {
   margin-bottom: 20px;
   line-height: 24px;
@@ -538,67 +541,77 @@ footer {
 }
 
 
-@media (max-width:460px) {
-  .container{
-    flex-direction: column;
-  }
-
-.swiper{
-  flex-direction: column;
-  width: 400px;
-  display: none;
+/* Mobil versiya (max 460px) */
+/* Umumiy nolga tushirish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.btn{
-  margin-top: 50px;
-  margin-bottom: 50px;
+/* Body ekranga mos bo‘lishi uchun */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* yon tomondan ochilishni oldini oladi */
+  scroll-behavior: smooth;
 }
 
-  .hero-img{
-    width: 40px;
-    height: 40px;
-    margin-top: 70px;
-    position: none;
-    
-  }
+/* Asosiy header stili */
+header {
+  width: 100%;
+  background-color: #fffafa;
+  color: black;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: 18px;
+}
 
+.btn2 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
-  .data_div{
-    display: block;
-  }
-
-  .cards1{
+/* Mobil moslashuv */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    margin-left: 40px;
-  }
-  .card{
-    margin-top: 10px;
+    align-items: center;
+    gap: 10px;
   }
 
-
-  .img_1{
-    width: 350px;
-    height: 400px;
+  header {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .sec_h1{
-      font-size: 35px;
-  }
-
-
-  .nav{
-    display: block;
+  .nav {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    margin: 0;
-    flex-direction: column;
- 
+    gap: 8px;
   }
 
-  header{
-    flex-direction: column;
+  .btn2 {
+    width: 90%;
   }
-} 
+
+  header div strong {
+    font-size: 22px;
+  }
+}
 
 #toTop {
       position: fixed;
