@@ -129,6 +129,10 @@ nav a:hover::after {
   padding: 40px;
 }
 
+.telefonnom{
+  margin: 10px 0;
+}
+
 
 #hero p {
   margin-bottom: 20px;
